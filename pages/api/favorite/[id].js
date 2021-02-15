@@ -1,7 +1,8 @@
 import PouchDB from "pouchdb";
+import path from "src/db";
 
 export default async function handler(req, res) {
-  let db = new PouchDB("favoriteCoins");
+  let db = new PouchDB(path);
   switch (req.method) {
     case "DELETE":
       await db.remove({
