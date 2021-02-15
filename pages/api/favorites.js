@@ -1,5 +1,5 @@
 import PouchDB from "pouchdb";
-import path from "src/db";
+import { path } from "src/db";
 
 export default async function handler(req, res) {
   let db = new PouchDB(path);
