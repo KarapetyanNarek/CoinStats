@@ -1,0 +1,62 @@
+{
+  "name": "coin-stats",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "chart.js": "^2.9.4",
+    "classnames": "^2.2.6",
+    "moment": "^2.29.1",
+    "next": "10.0.6",
+    "npm": "^7.5.4",
+    "numeral": "^2.0.6",
+    "pouchdb": "^7.2.2",
+    "react": "17.0.1",
+    "react-bottom-scroll-listener": "^5.0.0",
+    "react-chartjs-2": "^2.11.1",
+    "react-dom": "17.0.1",
+    "swr": "^0.4.2"
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": false
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": false
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "devDependencies": {
+    "next-images": "^1.7.0"
+  }
+}
