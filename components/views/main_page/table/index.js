@@ -53,12 +53,16 @@ function TableCoins() {
 
   const classes = useStyles();
 
-  function addFavorietsHandler(id) {
-    fetch(`/api/favorite/${id}`, {
-      method: favorites.some((f) => f === id) ? "DELETE" : "PUT",
-      body: JSON.stringify(data.rows.find((i) => i.id === id)),
-    });
-    mutate();
+  async function addFavorietsHandler(id) {
+    try {
+      await fetch(`/api/favorite/${id}`, {
+        method: favorites.some((f) => f === id) ? "DELETE" : "PUT",
+        body: JSON.stringify(data.rows.find((i) => i.id === id)),
+      });
+      mutate();
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   return (
